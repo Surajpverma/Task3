@@ -1,0 +1,23 @@
+%button {
+    border: 0;
+    background: #0087cc;
+    border-radius: 4px;
+    box-shadow: 0 5px 0 #006599;
+    color: #fff;
+    cursor: pointer;
+    margin: 0;
+    outline: 0;
+    padding: 6px 12px;
+    transition: all .1s linear;
+ 
+  &:active{
+    box-shadow: 0 2px 0 #006599;
+    transform: translateY(3px);
+	background-color: rgb(41, 255, 130);
+  }
+}
+
+
+.button{
+  @extend %button;
+}

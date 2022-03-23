@@ -1,0 +1,211 @@
+@import 'config';
+@import 'btn';
+
+$background-color: #2A2E37;
+$search-bg-color: #242628;
+$icon-color: #00FEDE;
+$transition: all .5s ease;
+
+body{
+    font-family: $fonts;
+    
+    background: radial-gradient(65% 100% at 50% 0%, #00FF94 0%, rgba(0, 255, 148, 0.25) 100%), linear-gradient(230deg, #000000 25%, #170059 100%), linear-gradient(215deg, #FFEBB9 10%, #19004E 80%), radial-gradient(100% 245% at 100% 100%, #FFFFFF 0%, #000353 100%), linear-gradient(125deg, #1400FF 0%, #3A0000 100%), linear-gradient(225deg, #00F0FF 30%, #000B6F 45%, #00EBFC 45%, #001676 65%, #00E1F6 65%, #001676 85%, #00ECFD 85%, #001676 100%), linear-gradient(135deg, #00F0FF 0%, #000B6F 15%, #00EBFC 15%, #001676 35%, #00E1F6 35%, #001676 55%, #00ECFD 55%, #001676 100%);
+    background-blend-mode: soft-light, screen, overlay, overlay, difference, overlay, normal;
+  }
+  .main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    
+.container{
+  padding: 10px;
+  border-radius: 65px;
+  border-radius: 65px;
+  background: linear-gradient(145deg, #32b866, #3cda79);
+  box-shadow:  31px 31px 62px #2ca159,
+               -31px -31px 62px #44f789;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 10px solid rgba(255, 255, 255, 1);
+  margin-top: 40px;
+  border-radius: 30px;
+  
+  .left{
+    width: 60%;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: flex;
+    align-items: flex-end;
+    height: 600px;
+    background: url(../img/cloudy.jpg);
+    background-size: cover;
+    background-position: center;
+    .details{
+      display: flex;
+      align-items: flex-end;
+      backdrop-filter: blur( 40px );
+      -webkit-backdrop-filter: blur( 20px );
+      height: -200px;
+      width: 100%;
+      border-bottom-left-radius: 30px;
+      .temp{
+        display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 0;
+                font-size: 100px;
+              }
+            .d2{
+              display: flex;
+              
+                flex-direction: column;
+                font-size: 30px;
+                align-items: center;
+                justify-content: center;
+                
+              }
+              .loading{
+                visibility: hidden;
+            
+                &::after{
+                  visibility: visible;
+              content: "Aa rha h bhai rukja 2 second";
+            }
+        }}
+    }
+    .right{
+      width: 40%;
+      height: 600px;
+      background-color: rgba(0, 109, 5, 0.4);
+        backdrop-filter: blur( 40px );
+        border-bottom-right-radius: 30px;
+        border-top-right-radius: 30px;
+        
+    -webkit-backdrop-filter: blur( 20px );
+        .container1 {
+          position: relative;
+          left: 55%;
+          top: 20px;
+          transform: translate(-50%);
+        }
+        
+        .search-box {	
+          input[type="text"] {
+            border: none;
+            background: none;
+            z-index: 1;
+            width: 40px;
+            height: 25px;
+            transition: all .25s ease-in .25s;
+            color: transparent;
+            font-size: .75rem;
+            line-height:30px;
+            &:hover {
+              cursor: pointer;
+              &:focus {
+                cursor: text;
+              }
+              + span {
+                background: rgba(255,255,255,0.2);
+              }
+            }
+            &:focus {
+              width: 300px;
+              padding: 0 10px;
+              outline: none;
+              color: black;
+              background:none;
+              color: white;
+              + span {
+                width: 200px;
+                &::before {
+                  width:2px;
+                  opacity: 0;
+                  transition: all .25s ease-in;
+                }
+              }
+            }
+            + span {
+              z-index: -1;
+              position: absolute;
+              border: 2px solid white;
+              top: 0;
+              width: 25px;
+              height: 25px;
+              transition: all .25s ease-in .25s;
+              border-radius: 25px;
+              left: 0;
+              &::before {
+                transition: all .25s ease-in .5s;
+                transform-origin: left top;
+                content: '';
+                position: absolute;
+                width: 15px;
+                height: 4px;
+                border-radius: 5px;
+                background: white;
+                transform: rotate(45deg) translate(26px, -2px);
+              }
+            }
+          }
+          
+         .R{
+          opacity: 0.50;
+          color: white;
+          transition: opacity 1s ease 0s;
+          font-size: 25px;
+          padding: 5px;
+          margin-top: 15px;
+          // display: flex;
+          width: 80%;
+          // flex-direction: column;
+          // align-items: center;
+          // justify-content: center;
+          margin: 5px;
+          &:hover{
+            opacity: 1.0;
+            border: 2px solid rgba(255,255,255,0.2);
+            background-color: rgba(43, 231, 106, 0.4);
+
+          }
+          .R1{
+            margin-top: 15px;
+          }
+         }   
+        }}}}
+        @media only screen and (max-width: 600px){
+          .main{
+          .container{
+            flex-direction: column-reverse;
+            .left{
+              width: 100%;
+              border-bottom-left-radius: 30px;
+              border-bottom-left-radius: 30px;
+              border-top-left-radius: 0px;
+              height: 300px;
+              .temp{
+                font-size: 20px;
+              }
+            }
+            .right{
+              width: 100%;
+              border-top-left-radius: 30px;
+              border-top-left-radius: 30px;
+              border-bottom-right-radius: 0px;
+              height: fit-content;
+            }
+          }
+        }}
+        @media only screen and (max-width: 450px){
+          #temp{
+            font-size: 500%;
+          }
+        }
+        @media only screen and (max-width: 360px){
+          #temp{
+            font-size: 300%;
+          }
+        }
